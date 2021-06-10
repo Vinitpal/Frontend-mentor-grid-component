@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Gray-Blue: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: var(--Light-Gray);
+  margin: 5rem 15rem 0rem;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+}
+
+.div1 {
+  background-color: #fff;
+  grid-area: 1 / 1 / 2 / 3;
+  justify-content: space-around;
+  padding: 1rem 0.5rem 1rem 2rem;
+  border-radius: 10px;
+}
+
+.div1 > h3 {
+  color: var(--Cyan);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.div1 > h4 {
+  color: var(--Bright-Yellow);
+  font-weight: 700;
+}
+
+.div1 > p {
+  color: var(--Gray-Blue);
+  line-height: 1.5rem;
+}
+
+.div2 {
+  background-color: var(--Cyan);
+  color: #fff;
+  padding: 1.5rem 0.5rem 2rem 1.8rem;
+  border-bottom-left-radius: 8px;
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.div2 > h1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.div2 > h1 > span {
+  font-size: 16px;
+  margin-left: 10px;
+  opacity: 0.5;
+}
+
+.div2 > p {
+  margin: 2px auto 1.5rem;
+}
+
+.div2 > button {
+  width: 245px;
+  height: 50px;
+  border-radius: 8px;
+  font-size: inherit;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--Bright-Yellow);
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.div2 > button:active {
+  transform: scale(0.98);
+}
+
+.div2 > button:focus {
+  outline: none;
+}
+
+.div3 {
+  background-color: var(--Gray-Blue);
+  color: #fff;
+  padding: 1.4rem 0.5rem 2rem 1.8rem;
+  line-height: 20px;
+  border-bottom-right-radius: 8px;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.div3 div {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+footer {
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  body {
+    margin: 5rem 10rem 0rem;
+  }
+  .parent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .div1 {
+    grid-area: 1 / 1 / 2 / 4;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .div2 {
+    grid-area: 2 / 1 / 3 / 4;
+    border-bottom-left-radius: 0;
+  }
+  .div3 {
+    grid-area: 3 / 1 / 4 / 4;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
