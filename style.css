@@ -14,7 +14,7 @@ body {
   margin: 5rem 15rem 0rem;
 }
 
-.parent {
+.container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -24,7 +24,7 @@ body {
   border-radius: 8px;
 }
 
-.div1 {
+.join-comm {
   background-color: #fff;
   grid-area: 1 / 1 / 2 / 3;
   justify-content: space-around;
@@ -32,23 +32,23 @@ body {
   border-radius: 10px;
 }
 
-.div1 > h3 {
+.join-comm > h3 {
   color: var(--Cyan);
   font-weight: 700;
   font-size: 24px;
 }
 
-.div1 > h4 {
+.join-comm > h4 {
   color: var(--Bright-Yellow);
   font-weight: 700;
 }
 
-.div1 > p {
+.join-comm > p {
   color: var(--Gray-Blue);
   line-height: 1.5rem;
 }
 
-.div2 {
+.monthly-sub {
   background-color: var(--Cyan);
   color: #fff;
   padding: 1.5rem 0.5rem 2rem 1.8rem;
@@ -56,23 +56,23 @@ body {
   grid-area: 2 / 1 / 3 / 2;
 }
 
-.div2 > h1 {
+.monthly-sub > h1 {
   display: flex;
   align-items: center;
   margin-bottom: 0;
 }
 
-.div2 > h1 > span {
+.monthly-sub > h1 > span {
   font-size: 16px;
   margin-left: 10px;
   opacity: 0.5;
 }
 
-.div2 > p {
+.monthly-sub > p {
   margin: 2px auto 1.5rem;
 }
 
-.div2 > button {
+.monthly-sub > button {
   width: 245px;
   height: 50px;
   border-radius: 8px;
@@ -86,15 +86,15 @@ body {
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.div2 > button:active {
+.monthly-sub > button:active {
   transform: scale(0.98);
 }
 
-.div2 > button:focus {
+.monthly-sub > button:focus {
   outline: none;
 }
 
-.div3 {
+.why-us {
   background-color: var(--Gray-Blue);
   color: #fff;
   padding: 1.4rem 0.5rem 2rem 1.8rem;
@@ -103,7 +103,7 @@ body {
   grid-area: 2 / 2 / 3 / 3;
 }
 
-.div3 div {
+.why-us div {
   font-size: 14px;
   opacity: 0.5;
 }
@@ -112,23 +112,29 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   body {
-    margin: 5rem 10rem 0rem;
+    margin: 5rem 5rem 0rem;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  body {
+    margin: 5rem 1rem 0rem;
   }
   .parent {
     grid-template-columns: repeat(1, 1fr);
   }
-  .div1 {
+  .join-comm {
     grid-area: 1 / 1 / 2 / 4;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .div2 {
+  .monthly-sub {
     grid-area: 2 / 1 / 3 / 4;
     border-bottom-left-radius: 0;
   }
-  .div3 {
+  .why-us {
     grid-area: 3 / 1 / 4 / 4;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
